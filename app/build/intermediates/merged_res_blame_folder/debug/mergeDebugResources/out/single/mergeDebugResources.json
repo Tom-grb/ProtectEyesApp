@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-debug-23:\\layout_overlay_reminder.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-main-25:\\layout\\overlay_reminder.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-debug-23:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-main-25:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.eyerest.app-debug-23:/drawable_bg_card.xml.flat",
+        "source": "com.example.eyerest.app-main-25:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.example.eyerest.app-debug-23:/drawable_bg_btn_secondary.xml.flat",
+        "source": "com.example.eyerest.app-main-25:/drawable/bg_btn_secondary.xml"
+    },
+    {
+        "merged": "com.example.eyerest.app-debug-23:/drawable_bg_btn_primary.xml.flat",
+        "source": "com.example.eyerest.app-main-25:/drawable/bg_btn_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-debug-23:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.7\\com.example.eyerest.app-main-25:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.eyerest.app-debug-23:/layout_activity_main.xml.flat",
+        "source": "com.example.eyerest.app-main-25:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.eyerest.app-debug-23:/layout_overlay_reminder.xml.flat",
+        "source": "com.example.eyerest.app-main-25:/layout/overlay_reminder.xml"
+    }
+]

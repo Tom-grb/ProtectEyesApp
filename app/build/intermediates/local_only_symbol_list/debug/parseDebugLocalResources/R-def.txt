@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_btn_primary
+drawable bg_btn_secondary
+drawable bg_card
+drawable ic_launcher
+id btn10
+id btn5
+id btnBattery
+id btnNotification
+id btnOverlay
+id btnRest
+id btnSave
+id btnToggle
+id etRest
+id etThreshold
+id tvHint
+layout activity_main
+layout overlay_reminder
+string app_name
