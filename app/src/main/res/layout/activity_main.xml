@@ -25,10 +25,68 @@
             android:textColor="#666666"
             android:textSize="14sp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_panel"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvCountdownLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="守护未开启"
+                android:textColor="#8E8E93"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCountdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="--:--"
+                android:textColor="#1C1C1E"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="今日使用：不足1分钟"
+            android:textColor="#1C1C1E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvContinuous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="连续使用：不足1分钟"
+            android:textColor="#8E8E93"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="#FF3B30"
+            android:textSize="14sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:text="连续使用阈值（分钟）"
             android:textSize="16sp" />
 
@@ -38,20 +96,6 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:hint="默认 30" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="休息时长 Y（分钟）"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/etRest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="默认 5" />
 
         <Button
             android:id="@+id/btnSave"
@@ -73,6 +117,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="授予悬浮窗权限" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="OPPO/一加用户：还需在系统设置中开启「允许后台弹出界面」和「允许后台运行」"
+            android:textColor="#FF9500"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnAutostart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="开启自启动（国产手机必设）" />
 
         <Button
             android:id="@+id/btnNotification"

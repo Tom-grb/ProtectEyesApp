@@ -612,6 +612,7 @@ drawable abc_vector_test
 drawable bg_btn_primary
 drawable bg_btn_secondary
 drawable bg_card
+drawable bg_panel
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -708,12 +709,11 @@ id async
 id beginning
 id blocking
 id bottom
-id btn10
-id btn5
+id btnAutostart
 id btnBattery
 id btnNotification
+id btnOk
 id btnOverlay
-id btnRest
 id btnSave
 id btnToggle
 id buttonPanel
@@ -733,7 +733,6 @@ id disableHome
 id edit_query
 id edit_text_id
 id end
-id etRest
 id etThreshold
 id expand_activities_button
 id expanded_menu
@@ -822,7 +821,11 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-id tvHint
+id tvContinuous
+id tvCountdown
+id tvCountdownLabel
+id tvStatus
+id tvToday
 id unchecked
 id uniform
 id up

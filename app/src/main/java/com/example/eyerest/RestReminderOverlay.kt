@@ -11,29 +11,26 @@ import android.widget.TextView
 
 class RestReminderOverlay(
     private val context: Context,
-    private val onSnooze: (Long) -> Unit
+    private val continuousMs: Long,
+    private val todayMs: Long,
+    private val onDismiss: () -> Unit
 ) {
 
     private var windowManager: WindowManager? = null
     private var view: android.view.View? = null
 
-    fun show() {
+    fun show(): Boolean {
         val wm = context.getSystemService(WindowManager::class.java)
         windowManager = wm
 
         val v = LayoutInflater.from(context).inflate(R.layout.overlay_reminder, null)
-        v.findViewById<TextView>(R.id.tvHint).text =
-            "已连续使用 ${SettingsStore.threshold(context)} 分钟\n建议让眼睛休息一下"
+        v.findViewById<TextView>(R.id.tvContinuous).text =
+            "连续使用手机：${formatDuration(continuousMs)}"
+        v.findViewById<TextView>(R.id.tvToday).text =
+            "今日使用手机：${formatDuration(todayMs)}"
 
-        val restMs = SettingsStore.rest(context) * 60_000L
-        v.findViewById<Button>(R.id.btnRest).setOnClickListener {
-            dismiss(); onSnooze(restMs)
-        }
-        v.findViewById<Button>(R.id.btn5).setOnClickListener {
-            dismiss(); onSnooze(5 * 60_000L)
-        }
-        v.findViewById<Button>(R.id.btn10).setOnClickListener {
-            dismiss(); onSnooze(10 * 60_000L)
+        v.findViewById<Button>(R.id.btnOk).setOnClickListener {
+            dismiss(); onDismiss()
         }
 
         val type = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
@@ -49,16 +46,29 @@ class RestReminderOverlay(
             PixelFormat.TRANSLUCENT
         ).apply { gravity = Gravity.CENTER }
 
-        try {
+        return try {
             wm.addView(v, params)
             view = v
+            true
         } catch (e: Exception) {
             view = null
+            false
         }
     }
 
     fun dismiss() {
         view?.let { runCatching { windowManager?.removeView(it) } }
         view = null
+    }
+
+    private fun formatDuration(ms: Long): String {
+        val totalMin = ms / 60000
+        val h = totalMin / 60
+        val m = totalMin % 60
+        return when {
+            h > 0 -> "${h}小时${m}分钟"
+            m > 0 -> "${m}分钟"
+            else -> "不足1分钟"
+        }
     }
 }
